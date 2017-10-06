@@ -1,6 +1,6 @@
 //Spread in destructuring
-const [x, y, ...z] = ['a'];
-console.log(x, y, z);
+const [x1, y1, ...z1] = ['a'];
+console.log(x1, y1, z1);
 
 //Spread in object literals
 var obj1 = { foo: 'bar', x: 42 };
