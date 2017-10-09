@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function level1 (node) {
+        var nodeList = document.querySelectorAll('div');
+
+        for (var j = 0; j < nodeList.length; j++) {
+            var item = nodeList[j];
+
+            level2(item);
+        }
+
+        function level2 (node) {
+            var nodeList = document.querySelectorAll('div');
+
+            for(var k = 0; k < nodeList.length; k++) {
+                var item = nodeList[k];
+
+                level3(item);
+            }
+
+            function level3 (node) {
+                var nodeList = document.querySelectorAll('div');
+
+                for (var l = 0; l < nodeList.length; l++) {
+                    var item = nodeList[l];
+                }
+            }
+        }
+    }
+
+    function createDivs (count) {
+        for (var m = 0; m < count; m++) {
+            var div = document.createElement('div');
+
+            div.id = 'div' + m;
+            document.body.appendChild(div);
+        }
+    }
+
+    var start = Date.now();
+
+    createDivs(100);
+    for (var i = 0; i < 1; i++)
+        level1();
+
+    console.log('Execution time:', Date.now() - start);
+
+</script>
+</body>
+</html>
