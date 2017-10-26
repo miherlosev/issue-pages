@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <base href="/">
+</head>
+<body>
+    <h1>Page</h1>
+    <script>
+        var base = document.createElement('base');
+
+        document.head.appendChild(base);
+
+        var script = document.createElement('script');
+		script.src = '0.js';
+		document.body.appendChild(script);
+
+        console.log(script.src);
+    </script>
+
+</body>
+</html>
