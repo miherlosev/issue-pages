@@ -1,0 +1,18 @@
+<html>
+	<body>
+		<button id="openWindow">Open window</button>
+		<button id="closeWindow">Close window</button>
+		<script>
+		    var openWindowBtn     = document.getElementById('openWindow');
+			var closeWindowBtn    = document.getElementById('closeWindow');
+			var openedWindowProxy = null;
+			
+			openWindowBtn.addEventListener('click', function () {
+				openedWindowProxy = window.open("child.html", "Hello w3", "width=640,height=480");
+			});
+			closeWindowBtn.addEventListener('click', function () {
+			    openedWindowProxy.close();
+			});
+		</script>
+	</body>
+</html>

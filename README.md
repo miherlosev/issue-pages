@@ -9,3 +9,7 @@ Pages
 
 ## Testcafe
 Pages
+
+## Investigation
+Pages
+- [multi browser windows](multi-browser-window/index.html)
