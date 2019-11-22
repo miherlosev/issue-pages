@@ -10,11 +10,16 @@
 	<body>
 		<h1>Child page</h1>
 		<button class="btn" id="switchToParentTab">Switch to parent tab</button>
+		<button class="btn" id="clickOnParentBody">Click on parent body</button>
 		<script>
 			var switchToParentTabBtn = document.getElementById('switchToParentTab');
+			var clickOnParentBodyBtn = document.getElementById('clickOnParentBody');
 
 			switchToParentTabBtn.addEventListener('click', function () {
 				window.opener.focus();
+			});
+			clickOnParentBodyBtn.addEventListener('click', function () {
+				window.opener && window.opener.document.documentElement.click();
 			});
 		</script>
 	</body>
